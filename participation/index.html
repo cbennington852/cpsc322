@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+  h1 {
+    background: linear-gradient(#e66465, #9198e5);
+  }
+  body
+  {
+    background: linear-gradient(#e66465, #9198e5);
+  }
+
+  
+
+</style>
+
+<head>
+  <title>Charles Bennington Participation CPSC-332-01</title>
+</head>
+<body  id="pageColor">
+
+<h1 id = "h1">9/4/2024</h1>
+<p>haha woo</p>
+
+<button id="sillyButton">change color fade</button>
+</body>
+
+
+
+<script>
+
+  let sillyButton = document.getElementById("sillyButton");
+  sillyButton.addEventListener("click", function() {
+    changeTextColor("red");
+  });
+
+  function changeTextColor() {
+    let heading = document.getElementById("h1");
+    let page = document.getElementById("pageColor")
+    heading.style.color = getRandomColor();
+    page.style.background = getRandomColor();
+
+  }
+
+  //one youtube tutorial later...
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+
+
+</script>
+</html>
